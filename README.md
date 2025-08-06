@@ -1,7 +1,7 @@
-📌 Project Motivation
+📌 Project Motivation:  
 Being passionate about fitness and trained in martial arts, I identified a limitation in current wearable technology: while cardiovascular tracking is well-supported, strength training analysis remains underdeveloped. This project was driven by the desire to build a tool that supports individuals in achieving their fitness goals with greater safety and effectiveness.
 
-📂 Overview
+📂 Overview:
 This repository contains the complete codebase and assets for a context-aware fitness tracking system capable of:
 
 Recognizing various strength training exercises
