@@ -3,51 +3,30 @@ Being passionate about fitness and trained in martial arts, I identified a limit
 
 Overview
 This repository contains the complete codebase and assets for a context-aware fitness tracking system capable of:
-
-Recognizing various strength training exercises
-
-Counting exercise repetitions
-
-Identifying incorrect form during execution
-
+1)Recognizing various strength training exercises
+2)Counting exercise repetitions
+3)Identifying incorrect form during execution
 The solution utilizes data obtained from wearable sensors and incorporates machine learning to provide insights comparable to those given by a personal fitness coach.
 
 Features
+1)Exercise Classification: Automatically detects major barbell exercises including Bench Press, Deadlift, Overhead Press, Barbell Row, and Squat
 
-Exercise Classification: Automatically detects major barbell exercises including Bench Press, Deadlift, Overhead Press, Barbell Row, and Squat
-
-Repetition Counting: Tracks the number of reps performed during each exercise with precision
-
-Form Detection: Identifies common technique faults in real time to promote safe training (feature in progress)
-
-Practical Implementation: Developed using real-life workout sensor data from wrist-mounted Meta Motion devices
+2)Repetition Counting: Tracks the number of reps performed during each exercise with precision
+3)Form Detection: Identifies common technique faults in real time to promote safe training (feature in progress)
+4)Practical Implementation: Developed using real-life workout sensor data from wrist-mounted Meta Motion devices
 
 Acknowledgments
 This work was influenced by Dave Ebbelaar’s research, especially his paper titled "Exploring the Possibilities of Context-Aware Applications for Strength Training". The concepts and methodologies in this project are built upon that foundation. His contributions can be explored further on his GitHub profile: @daveebbelaar.
 
 Technologies Used
-
-Hardware
-
 Meta Motion Sensor (Wrist-Worn): Captures data from accelerometers and gyroscopes
-
-Software
-
 Programming Language: Python
-
 Libraries:
-
 For data manipulation: pandas, numpy, scipy
-
 For model development: scikit-learn
-
 For visualizations: matplotlib, seaborn
 
-Development Tools:
-
-Jupyter Notebooks for experimentation
-
-Pickle for saving/loading preprocessed datasets
+Development Tools:Jupyter Notebooks for experimentation, Pickle for saving/loading preprocessed datasets
 
 Project Structure
 
