@@ -59,11 +59,11 @@ Edit
 1. Data Collection
 Sensor data is recorded using wrist-worn Meta Motion devices that simulate smartwatch placement. The sensors collect acceleration (X, Y, Z axes) and angular velocity while performing key barbell exercises such as:
 
-i)  Bench Press
-ii) Deadlift
-iii)Overhead Press
-iv) Barbell Row
-v)  Squat
+ i)  Bench Press
+ ii) Deadlift
+ iii)Overhead Press
+ iv) Barbell Row
+ v)  Squat
 
 2. Data Processing
 i)Outlier Filtering
