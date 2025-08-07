@@ -3,51 +3,35 @@ Being passionate about fitness and trained in martial arts, I identified a limit
 
 📂 Overview:
 This repository contains the complete codebase and assets for a context-aware fitness tracking system capable of:
-
 Recognizing various strength training exercises
-
 Counting exercise repetitions
-
 Identifying incorrect form during execution
 
 The solution utilizes data obtained from wearable sensors and incorporates machine learning to provide insights comparable to those given by a personal fitness coach.
 
 ⚙️ Features
-Exercise Classification
+1.Exercise Classification
 Automatically detects major barbell exercises including Bench Press, Deadlift, Overhead Press, Barbell Row, and Squat
-
-Repetition Counting
+2.Repetition Counting
 Tracks the number of reps performed during each exercise with precision
-
-Form Detection (in progress)
+3.Form Detection (in progress)
 Identifies common technique faults in real time to promote safe training
-
-Practical Implementation
+4.Practical Implementation
 Developed using real-life workout sensor data from wrist-mounted Meta Motion devices
 
 🙏 Acknowledgments
 This work was influenced by Dave Ebbelaar’s research, especially his paper titled "Exploring the Possibilities of Context-Aware Applications for Strength Training". The concepts and methodologies in this project are built upon that foundation. His contributions can be explored further on his GitHub profile: @daveebbelaar.
 
 🛠️ Technologies Used
-Meta Motion Sensor (Wrist-Worn)
+1.Meta Motion Sensor (Wrist-Worn)
 Captures data from accelerometers and gyroscopes
-
-Programming Language
-Python
-
-Libraries
-
-Data manipulation: pandas, numpy, scipy
-
-Model development: scikit-learn
-
-Visualizations: matplotlib, seaborn
-
-Development Tools
-
-Jupyter Notebooks for experimentation
-
-Pickle for saving/loading preprocessed datasets
+2.Programming Language: Python
+3.Libraries
+  i)  Data manipulation: pandas, numpy, scipy
+  ii) Model development: scikit-learn
+  iii)Visualizations: matplotlib, seaborn
+4.Development Tools
+ Jupyter Notebooks for experimentation
 
 🗂️ Project Structure
 bash
@@ -75,63 +59,46 @@ Edit
 1. Data Collection
 Sensor data is recorded using wrist-worn Meta Motion devices that simulate smartwatch placement. The sensors collect acceleration (X, Y, Z axes) and angular velocity while performing key barbell exercises such as:
 
-Bench Press
-
-Deadlift
-
-Overhead Press
-
-Barbell Row
-
-Squat
+i)  Bench Press
+ii) Deadlift
+iii)Overhead Press
+iv) Barbell Row
+v)  Squat
 
 2. Data Processing
-Outlier Filtering
+i)Outlier Filtering
 Local Outlier Factor (LOF) was used to eliminate unusual entries
-
-Signal Smoothing
+ii)Signal Smoothing
 Applied low-pass filters to minimize noise
-
-Temporal Segmentation
+iii)Temporal Segmentation
 Aggregated data across time windows to extract meaningful metrics like mean and standard deviation
-
-Frequency Transformation
+iv)Frequency Transformation
 Leveraged Fourier Transforms to identify cyclic patterns in motion data, enabling repetition detection
 
 3. Feature Engineering
-PCA
+i)PCA
 Principal Component Analysis reduced dimensionality while preserving essential motion signals
-
-K-Means Clustering
+ii)K-Means Clustering
 Grouped similar movement types to differentiate exercises with overlapping features
-
-Scalar Magnitudes
+iii)Scalar Magnitudes
 Calculated overall motion intensity using orientation-invariant values from sensor readings
 
 4. Model Training
 Machine learning models were trained to execute three primary tasks:
-
-Exercise Classification
+i)Exercise Classification
 Random Forest achieved 98.5% accuracy in identifying exercises
-
-Repetition Counting
+ii)Repetition Counting
 Implemented peak detection to count reps with ~95% accuracy
-
-Form Error Detection
+iii)Form Error Detection
 Trained dedicated models to recognize incorrect form, e.g., poor bench press technique
 
 5. Results
-Exercise Recognition Accuracy: 98.5%
-
-Repetition Count Error Margin: ~5%
-
-Form Detection Accuracy: 98.5%
+i)Exercise Recognition Accuracy: 98.5%
+ii)Repetition Count Error Margin: ~5%
+iii)Form Detection Accuracy: 98.5%
 
 📁 Key Files
 src/data/make_dataset.py: Converts raw data into structured format
-
 src/features/build_features.py: Creates machine learning features
-
 src/models/train_model.py: Model training and evaluation pipeline
-
 src/visualization/visualize.py: Generates visual interpretations of the results
